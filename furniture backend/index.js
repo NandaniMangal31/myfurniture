@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT||8000
 const cors = require("cors")
 const { Contact,Order} = require("./conn.js")
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')//sari chize request mai mil rhi h
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
@@ -85,6 +85,6 @@ res.json({data:"",message:"order create a succesfully"})
 
 })
 
-app.listen(port, () => {
+app.listen(port, () => {//particular port ke andar run krana
     console.log(`Example app listening on port ${port}`)
 })
